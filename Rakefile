@@ -14,7 +14,7 @@ include FileUtils
 NAME              = "with_named_scope"
 AUTHOR            = "Genki Takiuchi"
 EMAIL             = "genki@s21g.com"
-DESCRIPTION       = ""
+DESCRIPTION       = "Improved named_scope to be used like as with_scope"
 RUBYFORGE_PROJECT = "with_named_scope"
 HOMEPATH          = "http://#{RUBYFORGE_PROJECT}.rubyforge.org"
 BIN_FILES         = %w(  )
@@ -66,7 +66,8 @@ spec = Gem::Specification.new do |s|
 		Dir.glob("{bin,doc,test,lib,templates,generator,extras,website,script}/**/*") + 
 		Dir.glob("ext/**/*.{h,c,rb}") +
 		Dir.glob("examples/**/*.rb") +
-		Dir.glob("tools/*.rb")
+		Dir.glob("tools/*.rb") +
+    Dir.glob("rails/*.rb")
 
 	s.extensions = FileList["ext/**/extconf.rb"].to_a
 end
