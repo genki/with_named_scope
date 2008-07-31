@@ -2,11 +2,13 @@ require 'active_record'
 require 'active_record/named_scope'
 
 class WithNamedScope
-  VERSION = '0.0.3'
+  VERSION = '0.0.4'
 end
 
 module ActiveRecord
   class Base
+    named_scope :all
+
     class << self
     protected
       def with(&block)
