@@ -1,9 +1,9 @@
-
 = with_named_scope
 
+This is a monkey patch for using the patch I submitted here:
+  http://rails.lighthouseapp.com/projects/8994-ruby-on-rails/tickets/739
 
 == Description
-
 
 == Installation
 
