@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.description = %q{Improved named_scope to be used like as with_scope}
   s.email = %q{genki@s21g.com}
   s.extra_rdoc_files = ["README", "ChangeLog"]
-  s.files = ["README", "ChangeLog", "Rakefile", "test/test_helper.rb", "test/with_named_scope_test.rb", "lib/with_named_scope.rb", "rails/init.rb"]
+  s.files = ["README", "ChangeLog", "Rakefile", "test/test_helper.rb", "test/with_named_scope_test.rb", "test/test.sqlite3", "lib/with_named_scope.rb", "rails/init.rb"]
   s.has_rdoc = true
   s.homepage = %q{http://with_named_scope.rubyforge.org}
   s.rdoc_options = ["--title", "with_named_scope documentation", "--charset", "utf-8", "--opname", "index.html", "--line-numbers", "--main", "README", "--inline-source", "--exclude", "^(examples|extras)/"]
@@ -23,11 +23,17 @@ Gem::Specification.new do |s|
     s.specification_version = 2
 
     if current_version >= 3 then
+      s.add_runtime_dependency(%q<activerecord>, [">= 2.1.0"])
       s.add_runtime_dependency(%q<redgreen>, [">= 1.2.2"])
+      s.add_runtime_dependency(%q<sqlite3-ruby>, [">= 1.2.2"])
     else
+      s.add_dependency(%q<activerecord>, [">= 2.1.0"])
       s.add_dependency(%q<redgreen>, [">= 1.2.2"])
+      s.add_dependency(%q<sqlite3-ruby>, [">= 1.2.2"])
     end
   else
+    s.add_dependency(%q<activerecord>, [">= 2.1.0"])
     s.add_dependency(%q<redgreen>, [">= 1.2.2"])
+    s.add_dependency(%q<sqlite3-ruby>, [">= 1.2.2"])
   end
 end
