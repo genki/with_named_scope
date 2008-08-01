@@ -1,6 +1,6 @@
 = with_named_scope
 
-This is a monkey patch for using the patch I submitted here:
+  This is a monkey patch for using the patch I submitted here:
   http://rails.lighthouseapp.com/projects/8994-ruby-on-rails/tickets/739
 
 == Description
@@ -15,12 +15,18 @@ This is a monkey patch for using the patch I submitted here:
 
 	gem install with_named_scope
 
-
 == Features/Problems
 
+  * Scoped block for named_scope
+  * Introduces AR.identity scope
 
 == Synopsis
 
+  User.active.with_scope do
+    User.count #=> equals to User.active.count
+  end
+
+  User.identity.count #=> User.count
 
 == Copyright
 
