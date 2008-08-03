@@ -3,7 +3,7 @@ require 'active_record'
 require 'active_record/named_scope'
 
 class WithNamedScope
-  VERSION = '0.0.5'
+  VERSION = '0.0.6'
 end
 
 module ActiveRecord
